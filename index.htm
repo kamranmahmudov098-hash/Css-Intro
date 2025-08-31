@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Selector Tapşırıq</title>
+  <style>
+    /* 1. Element selector - bütün p elementlərini seçir */
+    p {
+      color: blue;
+    }
+
+    /* 2. ID selector - yalnız #xüsusi olan elementi seçir */
+    #xususi {
+      font-weight: bold;
+    }
+
+    /* 3. Class selector - bütün .qirmizi sinifinə aid elementləri seçir */
+    .qirmizi {
+      color: red;
+    }
+
+    /* 4. Universal selector - bütün elementlərə tətbiq olunur */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 5. Descendant selector - div içindəki span elementlərini seçir */
+    div span {
+      background: yellow;
+    }
+
+    /* 6. Child selector - yalnız div-in birbaşa child p elementlərini seçir */
+    div > p {
+      font-size: 20px;
+    }
+
+    /* 7. Adjacent sibling selector - h1-dən sonra gələn ilk p elementini seçir */
+    h1 + p {
+      color: green;
+    }
+
+    /* 8. General sibling selector - h2-dən sonra gələn bütün p-ləri seçir */
+    h2 ~ p {
+      font-style: italic;
+    }
+
+    /* 9. Attribute selector - yalnız title atributu olan elementləri seçir */
+    [title] {
+      border: 1px solid black;
+    }
+
+    /* 10. Attribute ilə dəqiq uyğun gələn */
+    a[href="https://zuhur.az"] {
+      color: purple;
+    }
+
+    /* 11. Attribute başlayırsa ilə */
+    a[href^="https"] {
+      text-decoration: none;
+    }
+
+    /* 12. Attribute bitirsə ilə */
+    a[href$=".az"] {
+      font-weight: bold;
+    }
+
+    /* 13. Attribute daxilində varsa */
+    a[href*="google"] {
+      background: lightgray;
+    }
+
+    /* 14. Pseudo-class :hover */
+    button:hover {
+      background: orange;
+    }
+
+    /* 15. Pseudo-class :first-child */
+    li:first-child {
+      color: red;
+    }
+
+    /* 16. Pseudo-class :last-child */
+    li:last-child {
+      color: blue;
+    }
+
+    /* 17. Pseudo-class :nth-child(2) */
+    li:nth-child(2) {
+      font-size: 20px;
+    }
+
+    /* 18. Pseudo-element ::before */
+    h1::before {
+      content: "2" ";
+    }
+
+    /* 19. Pseudo-element ::after */
+    h1::after {
+      content: "1";
+    }
+
+    /* 20. Group selector - eyni stili birdən çox elementə tətbiq edir */
+    h3, h4, h5 {
+      color: brown;
+    }
+  </style>
+</head>
+<body>
+  <h1>Salam Dünya</h1>
+  <p>Bu, sadə p elementidir</p>
+  <p id="xususi">Xüsusi p</p>
+  <p class="qirmizi">Qırmızı p</p>
+  <div>
+    <p>Div içindəki p</p>
+    <span>Div içində span</span>
+  </div>
+  <h2>Başlıq 2</h2>
+  <p title="info">Title atributlu p</p>
+  <a href="https://zuhur.az">Zuhur.az linki</a><br>
+  <a href="https://google.com">Google linki</a><br>
+  <button>Düymə</button>
+  <ul>
+    <li>Birinci</li>
+    <li>İkinci</li>
+    <li>Üçüncü</li>
+  </ul>
+  <h3>Başlıq 3</h3>
+  <h4>Başlıq 4</h4>
+  <h5>Başlıq 5</h5>
+</body>
+</html>
